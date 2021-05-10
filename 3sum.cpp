@@ -32,7 +32,7 @@ std::pair<int, int> two_sum(vector<int> arr, int c) {
 void three_sum(vector<int> arr, int tar) {
     insertSort(arr, 0, arr.size() - 1);
     for(int i = 0; i < arr.size() - 1; ++i) {
-        std::pair<int, int> ret = two_sum(arr, tar);
+        std::pair<int, int> ret = two_sum(arr, tar - arr[i]);
         if (ret != std::pair<int, int>(0, 0)) {
             cout << "Found at i=" << i << " j=" << ret.first << " k=" << ret.second << std::endl;
             return;
